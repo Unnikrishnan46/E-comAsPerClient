@@ -37,9 +37,9 @@ router.get('/', async (req, res) => {
     let totalOrders = await adminHelpers.getTotalOrders()
     let totalAmount = await adminHelpers.getTotalSalesAmount()
     let totalAmountSum ;
-    if(totalAmount){
-      totalAmountSum = totalAmount[0].total
-    }
+    // if(totalAmount){
+    //   totalAmountSum = totalAmount[0].total
+    // }
     let totalProducts = await adminHelpers.getTotalProductsCount()
     res.render('admin/dashboard', { admin: true ,jan,feb,march,april,may,june,july,aug,sept,oct,nov,des,totalOrders,totalAmountSum ,totalProducts})
   }
@@ -59,7 +59,7 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-  const originalId = 'unni'
+  const originalId = 'gagan'
   const originalPassword = '12345'
   console.log(req.body)
   const username = req.body.username
